@@ -42,9 +42,7 @@ def part1(filename):
                 loop.append(position)
                 break
     # print(loop)
-    print(len(loop)//2)
-            
-from bitarray import bitarray as ba        
+    print(len(loop)//2)   
     
 def part2(filename):
     f = open(filename, 'r')
