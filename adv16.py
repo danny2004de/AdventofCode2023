@@ -4,7 +4,6 @@ def part1(filename):
     lines = f.read().splitlines()
     directions = {'right': (0, 1), 'up': (-1, 0), 'down': (1, 0), 'left': (0, -1)}
     direction = directions['right']
-    # q = deque()
     q = []
     visited = np.zeros((len(lines), len(lines[0])))
     ds = {}
@@ -53,11 +52,9 @@ def part2(filename):
     lines = f.read().splitlines()
     directions = {'right': (0, 1), 'up': (-1, 0), 'down': (1, 0), 'left': (0, -1)}
     def find_energized(direction, position):
-        # direction = directions['right']
         q = []
         visited = np.zeros((len(lines), len(lines[0])))
         ds = {}
-        # position = (0, -1)
         q.append((direction, position))
         while len(q):
             direction, position = q.pop()
@@ -101,4 +98,6 @@ def part2(filename):
         m = max(m, find_energized(directions['down'], (-1, j)))
         m = max(m, find_energized(directions['up'], (len(lines), j)))
     print(m)
+
+part1('input')
 part2('input')
