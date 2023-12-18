@@ -25,7 +25,7 @@ def part2(filename):
     lines = f.read().splitlines()
     pos = (0, 0)
     loop = [(0, 0)]
-    perimeter = 1
+    perimeter = 0
     dirs = {'2': (0, -1), '3': (-1, 0), '1': (1, 0), '0': (0, 1)}
     for i, line in enumerate(lines):
         line = line.split()
